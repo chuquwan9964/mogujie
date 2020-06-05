@@ -1,0 +1,12 @@
+@import './normalize.css';
+
+body {
+  background-color: #ffffff;
+}
+a {
+  text-decoration: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+}

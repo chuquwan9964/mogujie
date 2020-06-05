@@ -1,32 +1,27 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <keep-alive exclude="detail">
+      <router-view></router-view>
+    </keep-alive>
+    <tab-bar-main></tab-bar-main>
   </div>
 </template>
 
+<script>
+import css from "@/assets/fonts/iconfont.css"
+import TabBarMain from "./components/common/tabbar/TabBarMain"
+export default {
+  data() {
+    return {
+      message: "HelloWorld"
+    };
+  },
+  components: {
+    TabBarMain
+  }
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  @import "./assets/css/base.css";
 </style>
